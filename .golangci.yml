@@ -5,7 +5,7 @@ linters:
   enable:
     - golangster
 
-linters-settings:
+settings:
   custom:
     golangster:
       path: ./golangster.so
