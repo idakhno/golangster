@@ -4,21 +4,20 @@ linters:
   default: none
   enable:
     - golangster
-
-linters-settings:
-  custom:
-    golangster:
-      path: ./golangster.so
-      description: Checks log messages for style and security issues
-      original-url: github.com/idakhno/golangster
-      settings:
-        rules:
-          lowercase: true
-          english_only: true
-          no_special_chars: true
-          no_sensitive: true
-        sensitive_keywords:
-          - password
-          - token
-          - secret
-          - api_key
+  settings:
+    custom:
+      golangster:
+        path: ./golangster.so
+        description: Checks log messages for style and security issues
+        original-url: github.com/idakhno/golangster
+        settings:
+          rules:
+            lowercase: true
+            english_only: true
+            no_special_chars: true
+            no_sensitive: true
+          sensitive_keywords:
+            - password
+            - token
+            - secret
+            - api_key
