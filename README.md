@@ -29,7 +29,7 @@
 ## Supported loggers
 
 - `log` (standard library)
-- `log/slog` (standard library, Go 1.25+)
+- `log/slog` (standard library, Go 1.21+)
 - `go.uber.org/zap` (`*zap.Logger`, `*zap.SugaredLogger`)
 
 ## Installation
@@ -58,7 +58,7 @@ go vet -vettool=./golangster -sensitive=false ./...
 **Step 1.** Build the plugin (requires CGO):
 
 ```bash
-CGO_ENABLED=1 go build -buildmode=plugin -o golangster.so ./plugin/
+CGO_ENABLED=1 go build -buildmode=plugin -o golangster.so plugin/plugin.go
 ```
 
 **Step 2.** Configure `.golangci.yml`:
