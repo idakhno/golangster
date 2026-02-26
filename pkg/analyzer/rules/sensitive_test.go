@@ -6,9 +6,9 @@ import (
 
 func TestContainsSensitiveKeyword(t *testing.T) {
 	tests := []struct {
-		input    string
-		wantBad  bool
-		wantKw   string
+		input   string
+		wantBad bool
+		wantKw  string
 	}{
 		{"user password: ", true, "password"},
 		{"api_key=", true, "api_key"},

@@ -9,8 +9,8 @@ import (
 
 // loggerPackages contains import paths of supported logger packages.
 var loggerPackages = map[string]bool{
-	"log":            true,
-	"log/slog":       true,
+	"log":             true,
+	"log/slog":        true,
 	"go.uber.org/zap": true,
 }
 
@@ -34,7 +34,7 @@ var logMethods = map[string]bool{
 	"Fatal": true, "Fatalf": true, "Fatalw": true,
 	"Panic": true, "Panicf": true, "Panicw": true,
 	"Print": true, "Printf": true, "Println": true,
-	"Log":   true,
+	"Log": true,
 }
 
 // LogCall holds information about a detected log call.

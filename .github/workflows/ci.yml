@@ -23,6 +23,14 @@ jobs:
       - name: Download dependencies
         run: go mod download
 
+      - name: Check formatting
+        run: |
+          if [ -n "$(gofmt -s -l .)" ]; then
+            echo "Unformatted files:"
+            gofmt -s -l .
+            exit 1
+          fi
+
       - name: Run unit tests
         run: go test -v -race ./pkg/...
 

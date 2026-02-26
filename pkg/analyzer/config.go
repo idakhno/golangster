@@ -15,10 +15,10 @@ type Config struct {
 
 // RulesConfig controls enabling and disabling of individual rules.
 type RulesConfig struct {
-	Lowercase    bool
-	EnglishOnly  bool
+	Lowercase      bool
+	EnglishOnly    bool
 	NoSpecialChars bool
-	NoSensitive  bool
+	NoSensitive    bool
 }
 
 // DefaultConfig returns a Config with all rules enabled.

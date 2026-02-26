@@ -13,11 +13,11 @@ func TestIsNonLatin(t *testing.T) {
 		{"starting server on port 8080", false},
 		{"failed to connect to database", false},
 		{"error reading file", false},
-		{"Запуск сервера", true},           // Cyrillic
-		{"服务器启动失败", true},                // Han (Chinese)
-		{"خطأ في الاتصال", true},           // Arabic
-		{"שגיאת חיבור", true},             // Hebrew
-		{"エラーが発生しました", true},             // Katakana/Hiragana
+		{"Запуск сервера", true}, // Cyrillic
+		{"服务器启动失败", true},        // Han (Chinese)
+		{"خطأ في الاتصال", true}, // Arabic
+		{"שגיאת חיבור", true},    // Hebrew
+		{"エラーが発生しました", true},     // Katakana/Hiragana
 		{"user created: john@example.com", false},
 		{"request timeout after 30s", false},
 	}
