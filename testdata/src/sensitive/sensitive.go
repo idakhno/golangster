@@ -8,10 +8,10 @@ func badLiterals() {
 	val3 := "sk-1234567890"
 
 	// sensitive keyword found in the string literal
-	slog.Info("user password: " + val1)  // want `log message may expose sensitive data \(keyword: "password"\)`
-	slog.Debug("api_key=" + val3)        // want `log message may expose sensitive data \(keyword: "api_key"\)`
-	slog.Info("token: " + val2)          // want `log message may expose sensitive data \(keyword: "token"\)`
-	slog.Error("secret value found")     // want `log message may expose sensitive data \(keyword: "secret"\)`
+	slog.Info("user password: " + val1) // want `log message may expose sensitive data \(keyword: "password"\)`
+	slog.Debug("api_key=" + val3)       // want `log message may expose sensitive data \(keyword: "api_key"\)`
+	slog.Info("token: " + val2)         // want `log message may expose sensitive data \(keyword: "token"\)`
+	slog.Error("secret value found")    // want `log message may expose sensitive data \(keyword: "secret"\)`
 }
 
 func badVariables() {

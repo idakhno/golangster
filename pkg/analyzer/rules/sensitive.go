@@ -42,7 +42,7 @@ func checkExprForSensitive(pass *analysis.Pass, expr ast.Expr, keywords []string
 	switch e := expr.(type) {
 	case *ast.BasicLit:
 		// check the string literal for sensitive keywords
-		val := strings.Trim(e.Value, `"` + "`")
+		val := strings.Trim(e.Value, `"`+"`")
 		if kw, found := containsSensitiveKeyword(val, keywords); found {
 			pass.Report(analysis.Diagnostic{
 				Pos:     e.Pos(),

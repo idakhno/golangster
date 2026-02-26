@@ -6,12 +6,12 @@ import (
 )
 
 func bad() {
-	slog.Info("Starting server on port 8080")      // want `log message must start with a lowercase letter`
-	slog.Error("Failed to connect to database")    // want `log message must start with a lowercase letter`
-	slog.Debug("Request received")                 // want `log message must start with a lowercase letter`
-	slog.Warn("Cache miss detected")               // want `log message must start with a lowercase letter`
-	log.Print("Application started")               // want `log message must start with a lowercase letter`
-	log.Printf("Server listening on %s", ":8080")  // want `log message must start with a lowercase letter`
+	slog.Info("Starting server on port 8080")     // want `log message must start with a lowercase letter`
+	slog.Error("Failed to connect to database")   // want `log message must start with a lowercase letter`
+	slog.Debug("Request received")                // want `log message must start with a lowercase letter`
+	slog.Warn("Cache miss detected")              // want `log message must start with a lowercase letter`
+	log.Print("Application started")              // want `log message must start with a lowercase letter`
+	log.Printf("Server listening on %s", ":8080") // want `log message must start with a lowercase letter`
 }
 
 func good() {
